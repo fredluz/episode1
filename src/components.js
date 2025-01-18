@@ -17,7 +17,11 @@ const StatsComponent = ({person}) => {
   
      return ( 
       <div>
-      <p>Name: {person.name} {person.surname}   </p>
+      <p>Name: {
+        person.name === 'Mike' 
+        ? `'Money' ${person.name} ${person.surname}`
+        : `${person.name} ${person.surname}` 
+        }</p>  
       Age: {person.age} <p> </p>
       <GetHealth person={person} />
       <h3> Attack : {person.attack} </h3>
