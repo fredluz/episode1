@@ -18,9 +18,9 @@ const person2 = {
     id: 'f2',  // Add unique identifier
     name: 'Mike',
     surname: 'Thunder',
-    age: 26,
+    age: 22,
     money: 10,
-    health: 8,
+    health: 6,
     attack: 1,
     class: 'Ally'
     }
@@ -30,13 +30,13 @@ const person2 = {
 var fighters = []
 fighters.push(person1)
 fighters.push(person2)
-const person3= {id: 'f3', name: 'Jimmy', surname: 'Doe', age: 12, money:30, health: 10, attack: 2, class: 'Enemy'}
+const person3= {id: 'f3', name: 'Jimmy', surname: 'Doe', age: 11, money:30, health: 10, attack: 2, class: 'Enemy'}
 fighters.push(person3)
 
-// OR
+const player = fighters.filter(person => person.class =='Player')
 
   return (
-    <div className="App">
+    <div style= {player[0].health <= 3 ? {backgroundColor : 'darkred'} : {} } className="App">
       <Entrance person={person1} />
       <div className="fighters-container">
         {fighters.filter(person => person.id !== 'f1')

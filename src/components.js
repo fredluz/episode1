@@ -4,15 +4,14 @@ const GetNameComponent = (props) => {
 
 
   const GetHealth = ({person}) => {
-    var healthBar
-    {person.health <= 3 ? 
-        healthBar= (
-                <h3 style={{color: 'red'}} className='blink_me'> Health : {person.health} </h3>) :  
-        healthBar=( 
-                <h3> Health : {person.health} </h3> )}
+    var healthBar = person.health <= 3 ? 
+                    <h3 style={{color: 'red'}} className='blink_me'> Health : {person.health} </h3>
+                 :<h3> Health : {person.health} </h3> 
     
     return healthBar
    }
+   
+   
 
 const StatsComponent = ({person}) => {
   
@@ -22,7 +21,7 @@ const StatsComponent = ({person}) => {
       Age: {person.age} <p> </p>
       <GetHealth person={person} />
       <h3> Attack : {person.attack} </h3>
-      {person.money > 0 || person.class !='Player' ? <h3> Money: {person.money} </h3> : <h3> Money : NOT ENOUGH </h3> }
+      {person.money > 0 || person.class !== 'Player' ? <h3> Money: {person.money} </h3> : <h3> Money : NOT ENOUGH </h3> }
     
   </div>
   )
