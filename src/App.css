@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Player {
+  color: blue;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+.Ally {
+  color: green;
+  text-shadow: 2px 2px 4px rgba(0, 0, 255, 0.3);
+}
+
+.Enemy {
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.3);
+}
+
+.Dead {
+  color: gray;
+  text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.3);
+}
+
+.fighters-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* adds space between fighters */
+  flex-wrap: wrap;  /* allows wrapping to next line if screen is too small */
+  padding: 20px;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
